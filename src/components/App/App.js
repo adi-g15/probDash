@@ -42,17 +42,13 @@ class App extends React.Component{
           )
         })
 
-        this.setChildren(newChildren)
+        this.setState({children: newChildren});
       })
 
   }
 
-  setChildren(newChildren){
-    this.setState({children: newChildren})
-  }
-
   render(){
-    return (
+    return(
       <div className="App">
         <header className="App-header">
           <p>
@@ -65,53 +61,4 @@ class App extends React.Component{
   }
 }
 
-/*
-  var App = React.createClass({
-      render: function() {
-          return (
-              <div>
-                  <h1>App main component! </h1>
-                  {
-                      this.props.children
-                  }
-              </div>
-          );
-      }
-  });
-
-*/
-
-/*
-    class App extends React.Component{
-
-      getInitialState(){
-          return [
-              {name:"Some Name", num: 45}
-          ]
-      },
-
-      addChild() {
-          // State change will cause component re-render
-          this.setState(this.state.concat([
-              {id:2,name:"Another Name"}
-          ]))
-      }
-
-      render: function() {
-          return (
-              <div>
-                  <h1>App main component! </h1>
-                  <button onClick={this.addChild}>Add component</button>
-                  {
-                      this.state.map((item) => (
-                          <SampleComponent key={item.id} name={item.name}/>
-                      ))
-                  }
-              </div>
-          );
-      }
-
-  });
-*/
-
-// export default App;
+export default App;
