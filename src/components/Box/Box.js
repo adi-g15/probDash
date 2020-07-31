@@ -26,8 +26,10 @@ class Box extends React.Component{
                 method: 'POST'
             }
         ).then(() => {
-            ++this.state.content.stars
+            let newContent = this.state.content
+            ++newContent.stars
             this.setState({
+                content: newContent,
                 starIncremented: true
             })
         })
