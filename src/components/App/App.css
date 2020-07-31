@@ -5,6 +5,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-content: center;
   align-items: center;
   justify-content: center;
   /* font-size: calc(8px + 2vmin); */
@@ -16,4 +17,5 @@
 
 .App-header{
   font-size: calc(15px + 2vmin);
+  text-align: center;
 }
