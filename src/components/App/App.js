@@ -37,21 +37,23 @@ class App extends React.Component{
         allPS.forEach(ps => { //forEach is blocking
 
           let bg = bootstrapBG[Math.floor(Math.random()*bootstrapBG.length)]
-          console.log('BG -> ', bg)
           newChildren.push(
             <Box content={ps} bgClass={bg}/>
           )
         })
 
-        this.setState({
-          children: newChildren
-        })
+        this.setChildren(newChildren)
       })
 
   }
 
+  setChildren(newChildren){
+    this.setState({
+      children: newChildren
+    })
+  }
+
   render(){
-    console.log(this.state)
     return (
       <div className="App">
         <header className="App-header">
