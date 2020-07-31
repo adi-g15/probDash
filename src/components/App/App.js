@@ -48,9 +48,7 @@ class App extends React.Component{
   }
 
   setChildren(newChildren){
-    this.setState({
-      children: newChildren
-    })
+    this.setState({children: newChildren})
   }
 
   render(){
@@ -61,8 +59,7 @@ class App extends React.Component{
             All Problem Statements added TILL NOW
           </p>
         </header>
-
-          {this.state.children}
+        {this.state.children}
       </div>
     );
   }
@@ -117,4 +114,4 @@ class App extends React.Component{
   });
 */
 
-export default App;
+// export default App;

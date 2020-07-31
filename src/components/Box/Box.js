@@ -52,7 +52,6 @@ class Box extends React.Component{
 
     render(){
         return (
-            // <div className='row'>
                 <div className={this.state.bgClass} style={{maxWidth: '80vw'}}>
                     <div className="card-header">{this.state.content.title}
                         <img src={like} width='24vw' style={{float: 'right'}} alt="Upvote" onClick={this.incrementStars}></img>
@@ -63,7 +62,7 @@ class Box extends React.Component{
                     </div>
                 </div>
             // </div>
-        )
+        );
     }
 }
 
